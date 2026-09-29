@@ -6,5 +6,6 @@ Experiments with LangChain4j.
 
 ~~~
 $ export ANTHROPIC_API_KEY=...
+$ export OPENAI_API_KEY=...
 $ mvn clean verify
 ~~~

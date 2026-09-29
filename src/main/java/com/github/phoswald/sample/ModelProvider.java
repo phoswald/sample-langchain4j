@@ -2,6 +2,7 @@ package com.github.phoswald.sample;
 
 import dev.langchain4j.model.anthropic.AnthropicChatModel;
 import dev.langchain4j.model.chat.ChatModel;
+import dev.langchain4j.model.openai.OpenAiChatModel;
 
 public enum ModelProvider {
 
@@ -11,6 +12,16 @@ public enum ModelProvider {
             return AnthropicChatModel.builder()
                     .apiKey(System.getenv("ANTHROPIC_API_KEY"))
                     .modelName("claude-sonnet-5-5")
+                    .build();
+        }
+    },
+
+    OPENAI {
+        @Override
+        public ChatModel buildChatModel() {
+            return OpenAiChatModel.builder()
+                    .apiKey(System.getenv("OPENAI_API_KEY"))
+                    .modelName("gpt-4.1")
                     .build();
         }
     };
