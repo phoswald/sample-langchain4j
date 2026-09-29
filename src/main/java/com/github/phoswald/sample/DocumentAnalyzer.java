@@ -19,6 +19,7 @@ public class DocumentAnalyzer {
                 Take care of precise spelling and punctuation: one comma after "Hello",
                 one space before the name, one exclamation mark at the end.
                 Do not add quotes, whitespace, line breaks or any other text.
+                Do not alter or shorten the name.
                 """);
         UserMessage userMessage = UserMessage.from(name);
         return chatModel.chat(systemMessage, userMessage).aiMessage().text();

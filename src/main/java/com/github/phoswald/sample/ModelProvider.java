@@ -21,7 +21,7 @@ public enum ModelProvider {
         public ChatModel buildChatModel() {
             return OpenAiChatModel.builder()
                     .apiKey(System.getenv("OPENAI_API_KEY"))
-                    .modelName("gpt-5.6-terra") // luna does not work!
+                    .modelName("gpt-5.6-luna")
                     .build();
         }
     };
